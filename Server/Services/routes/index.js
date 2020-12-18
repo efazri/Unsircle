@@ -10,6 +10,6 @@ router.post('/login', authenticationUser, UserController.login)
 router.get('/products', authenticationUser, ProductController.getProducts)
 router.post('/products', authenticationItem, ProductController.addProduct)
 router.put('/products/:productId', authenticationItem, authorization, ProductController.updateProduct)
-router.delete('products/:productId', authenticationItem, authorization, ProductController.deleteProduct)
+router.delete('/products/:productId', authenticationItem, authorization, ProductController.deleteProduct)
 
 module.exports = router

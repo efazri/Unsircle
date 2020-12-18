@@ -1,7 +1,7 @@
 const { Policy } = require ('../models')
 
 function authorization (req, res, next){
-    const id = req.decodedData.PolicyId
+    const id = req.adminDecoded.serviceDecoded.PolicyId
 
     Policy
         .findByPk(id)

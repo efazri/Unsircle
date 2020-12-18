@@ -25,7 +25,7 @@ class AppController {
             res.status(201).json(data)
         })
         .catch( err => {
-            console.log(err)
+            res.send(err)
         })
     }
 
@@ -49,7 +49,7 @@ class AppController {
             res.status(201).json(data)
         })
         .catch( err => {
-            console.log(err)
+            res.send(err)
         })
     }
 
@@ -71,7 +71,7 @@ class AppController {
             res.status(201).json(data)
         })
         .catch( err => {
-            console.log(err)
+            res.send(err)
         })
     }
 
@@ -99,7 +99,7 @@ class AppController {
             res.status(201).json(data)
         })
         .catch( err => {
-            console.log(err)
+            res.send(err)
         })
     }
 
@@ -118,10 +118,9 @@ class AppController {
             },
             access_token
         }, "IPSecret")
-        console.log(access_key)
         axios({
             method: 'PUT',
-            url: baseUrl + `3000/products`,
+            url: baseUrl + `3000/products/${productId}`,
             headers: {
                 access_key
             }
@@ -137,7 +136,7 @@ class AppController {
     static deleteProduct(req, res, next) {
         const access_token = req.headers.access_token
         const { productId } = req.params
-
+        console.log(req.params)
         const access_key = jwt.sign({
             productId,
             access_token
@@ -145,7 +144,7 @@ class AppController {
         }, "IPSecret")
         axios({
             method: 'delete',
-            url: baseUrl + `3000/products`,
+            url: baseUrl + `3000/products/${productId}`,
             headers: {
                 access_key
             }
@@ -154,7 +153,7 @@ class AppController {
             res.status(201).json(data)
         })
         .catch( err => {
-            console.log(err)
+            res.send(err)
         }) 
     }
 }

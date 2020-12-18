@@ -40,7 +40,8 @@ class ProductController {
     }
 
     static updateProduct (req, res, next) {
-        const { name, image_url, price, stock } = req.body
+        const { decoded, serviceDecoded } = req.adminDecoded
+        const { name, image_url, price, stock } = decoded.payload
         const id = req.params.productId
         Product
             .update({
