@@ -1,0 +1,18 @@
+[
+    {
+        "firstName" : "admin",
+        "lastName" : "admin",
+        "email" : "admin@mail.com",
+        "password" : "admin123123",
+        "phoneNumber" : "123123123",
+        "PolicyId": 1
+    },
+    {
+        "firstName" : "super admin",
+        "lastName" : "super admin",
+        "email" : "super_admin@mail.com",
+        "password" : "superadmin123123",
+        "phoneNumber" : "1231231234",
+        "PolicyId" : 3
+    }
+]

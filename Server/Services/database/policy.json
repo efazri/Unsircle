@@ -1,0 +1,12 @@
+[
+    {
+        "roleName" : "admin"
+    },
+    {
+        "roleName" : "costumers"
+    },
+    {
+        "roleName" : "super admin"
+    }
+
+]
